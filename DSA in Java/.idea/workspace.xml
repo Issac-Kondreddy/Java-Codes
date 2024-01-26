@@ -34,6 +34,7 @@
     "Application.Main.executor": "Run",
     "Application.count_digits.executor": "Run",
     "Application.count_digits_test.executor": "Run",
+    "Application.palindromes.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -47,7 +48,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.count_digits">
+  <component name="RunManager" selected="Application.palindromes">
     <configuration name="count_digits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Maths.count_digits" />
       <module name="DSA in Java" />
@@ -74,8 +75,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="palindromes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Maths.palindromes" />
+      <module name="DSA in Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Maths.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.palindromes" />
         <item itemvalue="Application.count_digits" />
         <item itemvalue="Application.count_digits_test" />
       </list>
@@ -98,7 +113,7 @@
       <updated>1706301068846</updated>
       <workItem from="1706301069906" duration="633000" />
       <workItem from="1706301707794" duration="213000" />
-      <workItem from="1706309834539" duration="830000" />
+      <workItem from="1706309834539" duration="2010000" />
     </task>
     <servers />
   </component>
