@@ -13,15 +13,18 @@ public class insertion_sort {
 
     }
     public static int[] insertionsort(int[] arr){
-        for(int i = 1;i<arr.length;i++){
+        if(arr.length==1){
+            return arr;
+        }
+        for(int i=1;i<arr.length;i++){
+            int key = arr[i];
             int j = i-1;
-            int temp = arr[i];
-            while(j>=0 && arr[j]>temp){
+            while(j>0 && arr[j]>key){
                 arr[j+1] = arr[j];
                 j--;
             }
-            arr[j+1] = temp;
+            arr[j+1] = key;
         }
         return arr;
-        }
+    }
 }

@@ -15,33 +15,27 @@ public class Quick_sort {
     }
     public static int[] quicksort(int[] arr, int low, int high){
         if(low<high){
-            int j = partition(arr, low, high);
-            quicksort(arr,low, j-1);
-            quicksort(arr, j+1, high);
+            int q = partition(arr, low, high);
+            quicksort(arr, low, q-1);
+            quicksort(arr, q+1,high);
         }
         return arr;
     }
 
     public static int partition(int[] arr, int low, int high){
-        int pivot = arr[low];
-        int i = low;
-        int j= high+1;
-        while(true) {
-            do {
+        int pivot = arr[high];
+        int i = low-1;
+        for(int j= low; j<=high-1;j++){
+            if(arr[j]<pivot){
                 i++;
-            } while (i < high && arr[i] <= pivot);
-            do {
-                j--;
-            } while (j > low && arr[j] > pivot);
-            if (i >= j) {
-                break;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
         }
-        arr[low] = arr[j];
-        arr[j] = pivot;
-        return j;
+        int temp = arr[i+1];
+        arr[i+1] = arr[high];
+        arr[high] = temp;
+       return i+1;
     }
 }
