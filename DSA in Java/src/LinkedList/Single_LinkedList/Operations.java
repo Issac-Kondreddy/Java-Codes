@@ -20,6 +20,9 @@ public class Operations {
         System.out.println();
         ll.insertion_at_node(345,546);
         ll.display();
+        System.out.println();
+        ll.deletenode(5);
+        ll.display();
     }
 
 }
@@ -121,6 +124,21 @@ class SLL {
         Single_Node newNode = new Single_Node(data);
         newNode.next = current.next;
         current.next = newNode;
+    }
+
+    public void deletenode(int data){
+        Single_Node temp = head;
+        Single_Node previous_node = null;
+        if(temp!=null && temp.data== data){
+            head=temp.next;
+            return;
+        }
+        while(temp!=null && temp.data!=data){
+            previous_node = temp;
+            temp = temp.next;
+        }
+        if(temp==null) return;
+        previous_node.next = temp.next;
     }
 }
 
