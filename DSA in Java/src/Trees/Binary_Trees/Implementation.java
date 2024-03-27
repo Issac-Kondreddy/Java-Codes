@@ -12,6 +12,8 @@ public class Implementation {
         bt.root.right.left = new Node(9);
         bt.root.right.right = new Node(11);
         System.out.println(bt.Height(bt.root));
+        System.out.println("The Level order traversal of tree is: ");
+        bt.Levelorder();
 
     }
 }
@@ -47,6 +49,26 @@ class BinaryTree{
             else{
                 return rdepth+1;
             }
+        }
+    }
+
+    void Levelorder(){
+        int height = Height(root);
+        for(int i = 1; i<=height;i++) {
+            currentlevel(root, i);
+        }
+    }
+
+    void currentlevel(Node node, int level){
+        if(node==null){
+            return;
+        }
+        if(level==1){
+            System.out.print(node.value + " ");
+        }
+        else if(level>1){
+            currentlevel(node.left, level-1);
+            currentlevel(node.right, level-1);
         }
     }
 }
